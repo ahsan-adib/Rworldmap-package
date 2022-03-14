@@ -3,14 +3,9 @@ library(rworldmap)
 
 data2 = read_excel("D:/R/Files/Population Coverage_Country.xlsx")
 
-View(data2)
-
-colnames(data2)
-
 y= data2 %>%
   select(Country,Combined)
 
-View(y)
 
 country_list = joinCountryData2Map(y,joinCode = "NAME", nameJoinColumn = "Country")
 
